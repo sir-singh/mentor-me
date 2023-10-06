@@ -1,15 +1,19 @@
 import React, { useState }  from 'react';
 import './UserCard.css'
-import { useNavigate } from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
+import YourComponent from './YourComponent';
 
 
 const UserCard = ({ user }) => {
-
     const navigate = useNavigate();
     const [showPopup, setShowPopup] = useState(false);
+    const userId = user.RESID;
+
+    const location = useLocation();
+    console.log(location);
 
     const handlePreviewUser = () => {
-        navigate('/preview');
+        navigate("/preview", {state: {userId: userId}});
     };
 
 
@@ -18,7 +22,6 @@ const UserCard = ({ user }) => {
 
         setTimeout(() => {
             setShowPopup(false);
-            // navigate('/engage');
         }, 2000);
     };
 
@@ -26,19 +29,20 @@ const UserCard = ({ user }) => {
     return (
         <div className="user-card-container">
             <div className="user-card">
-                <h2 className='user__name'>{user.name}</h2>
+                <YourComponent user={user} />
+                {/*<h2 className='user-meta__row'>{capitalizeFirstLetter(user?.NAME)}</h2>*/}
+            </div>
+            <div className="user-card">
                 <div className='user-meta'>
                     <div className='user-meta__row'>
                         <img height={16} width={16} src="icons/bag.png" alt="Bag Icon" title="Experience" />
-                        <span>{user.exp}</span>
+                        <span>{user?.EXP} years</span>
                     </div>
                     <div className='user-meta__row'>
                         <img height={16} width={16} src="icons/wallet.png" alt="Wallet Icon" title="Designation" />
-                        <span>{user.companyDetails.designation} At {user.comapanyType}</span>
-                    </div>
-                    <div className='user-meta__row'>
-                        <img height={16} width={16} src="icons/location.png" alt="Pin Icon" title="Location" />
-                        <span>{user.location}</span>
+                        <span>
+        {user?.ORGN ? `${capitalizeFirstLetter(user?.EXP_DESIG)} At ${capitalizeFirstLetter(user?.ORGN)}` : capitalizeFirstLetter(user?.EXP_DESIG)}
+    </span>
                     </div>
                     <div className='user-meta__row'>
                         <button
@@ -59,20 +63,14 @@ const UserCard = ({ user }) => {
                 </div>
                 <div className='user-details'>
                     <div className='user-details__row'>
-                        <div className='user-details__key'>Current</div>
-                        <div className='user-details__value'>{user.companyDetails.orgn}</div>
-                    </div>
-                    <div className='user-details__row'>
                         <div className='user-details__key'>Education</div>
-                        <div className='user-details__value'>{user.education}</div>
+                        <div className='user-details__value'>
+                            {user?.ENTITY_INSTITUTE_LABEL ? `${capitalizeFirstLetter(user?.COURSE_LABEL)} from ${capitalizeFirstLetter(user?.ENTITY_INSTITUTE_LABEL)}` : capitalizeFirstLetter(user?.COURSE_LABEL)}
+                        </div>
                     </div>
                     <div className='user-details__row'>
-                        <div className='user-details__key'>Strong skills</div>
-                        <div className='user-details__value'>{user.skills.primary.join(' ')}</div>
-                    </div>
-                    <div className='user-details__row'>
-                        <div className='user-details__key'>Also knows</div>
-                        <div className='user-details__value'>{user.skills.secondary.join(' ')}</div>
+                        <div className='user-details__key'>Expertise In</div>
+                        <div className='user-details__value'><span dangerouslySetInnerHTML={{ __html: user?.SKILLS }}></span></div>
                     </div>
                 </div>
             </div>
@@ -84,5 +82,10 @@ const UserCard = ({ user }) => {
         </div>
     );
 };
+
+function capitalizeFirstLetter(string) {
+    console.log(string);
+    return string.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
 
 export default UserCard;

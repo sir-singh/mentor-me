@@ -20,6 +20,12 @@ function App() {
 
     }
 
+    const  onPrevCallBack = (data) => {
+        const {userId} = data;
+        console.log(data)
+        window.location.href = "/preview?userId="+ userId;
+    }
+
     const [load, upadateLoad] = useState(true);
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -43,7 +49,7 @@ function App() {
             <Route path="/" element={<RegisterMentee onRegistration={onRegCallback}/>} />
               <Route path="/home" element={<Home />} />
               <Route path="/engage" element={<Engage />} />
-              <Route path="/preview" element={<Preview />} />
+              <Route path="/preview" element={<Preview onPreview={onPrevCallBack}/>} />
               <Route path="/engageMentor" element={<EngageResponse />} />
               {/*<Route path="/new" element={<New />} />*/}
           </Routes>

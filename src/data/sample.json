@@ -1,27 +1,30 @@
 {
-    "users": [
+    "data":
+    [
         {
-            "name": "Pankaj",
-            "exp": "5.5",
-            "skills": {
-                "secondary": [
-                    "Python"
-                ],
-                "primary": [
-                    "Java Java"
-                ]
-            },
-            "location": "Mumbai",
-            "companyDetails": {
-                "designation": "Technical Architect",
-                "orgn": "Amazon"
-            },
-            "comapanyType": "Indian MNC",
-            "education": "KVB",
-            "ratingDetails": {
-                "rating": "4.6",
-                "count": "10"
-            }
+            "NAME": null,
+            "TOTAL_EXP": "12.0",
+            "ABSOLUTE_CTC": 1200000,
+            "ACTIVE": "y",
+            "MOD_DT": null,
+            "PROFILE_TITLE": "Holding Valid H1 Visa. Associate Automation Architect - With 12 years of experience in QA and automation testing using various tools like Selenium WebDriver, Robot Framework, QTP, &SoapUI. Extensive experience in development of automation frameworks.",
+            "PROFILE_KEYWORDS_ID": null,
+            "PROFILE_KEYWORDS": "Manual Testing,QTP,Visual Basic,VB Script,Javascript,Java,ASP.NET,VB,PHP,MySQL,Oracle",
+            "EXPID": null,
+            "ORGN": "SNS Cybertech Pvt. Ltd",
+            "EXP_DESIG": "SeniorSoftware Test Engineer",
+            "EXP_PROFILE": "ïƒ˜\tInvolved in the Requirements Analysis.\r\nïƒ˜\tInvolved in the preparation of SRS Document.\r\nïƒ˜\tInvolved in the preparation of mock pages.\r\nïƒ˜\tInvolved in the preparation of Use-Case diagrams and DFDs.\r\nïƒ˜\tInvolved in Preparation and Execution of Test Cases.\r\nïƒ˜\tInvolved in Integration Testing and System Testing.\r\nïƒ˜\tDeveloped Test scripts using QTP.\r\nïƒ˜\tInvolved in defect tracking and reporting using Test Director.\r\nïƒ˜\tResponsible for the black Box Testing.",
+            "EXP_KEYWORDS": null,
+            "ORGNID": null,
+            "EXP_KEYWORDS_ID": null,
+            "DESIG_ID": null,
+            "EXP_TYPE": "F",
+            "PRJ_DETAILS": "Benefitfocus is the largest healthcare benefits software provider in the U.S. The BENEFITFOCUS Platform provides employers, insurance carriers and consumers with cloud-based technology to shop, enroll, manage and exchange benefits information. Benefitfocus clients include small, medium and large employers from all industries, as well as the nation�s top insurance companies.\nBenefitfocus is a true multi-tenant platform currently supporting thousands of unique employer clients that shop, enroll and manage their benefits, all in one place. Our Platform reduces costs, provides market advantage and improves consumer satisfaction\n\nInvolved in automating the product applications like eBilling, eEnrollment, eDirect, HRInTouch, eSales and Pay Roll",
+            "PRJ_ROLE": "•\tUnderstand the application functionality and test cases by interacting with onsite functional team.\n•\tIdentification of test cases for automation and automating using QTP/Selenium and automation framework.\n•\tDeveloped the Hybrid test automation fra",
+            "PRJ_TITLE": "Benefifocus",
+            "PRJ_SKILLS": "Selenium Webdriver,Robot Framework,Java,QTP,Jenkins,Teamcity,VB Script,SOAP UI",
+            "PRJ_SKILLS_ID": null,
+            "RESID": 9593527
         }
     ]
 }

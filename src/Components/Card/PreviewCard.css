@@ -1,0 +1,121 @@
+.user-card-container {
+    padding: 12px;
+    /* Add a light gray background color to make the card stand out */
+    background-color: #f2f2f2;
+}
+
+.user-card-list {
+    margin-left: 400px;
+    margin-right: 400px;
+    padding-left: 0px;
+}
+
+.user__name {
+    margin: 0;
+    text-align: left;
+    font-size: 25px;
+    color: #484848;
+    /* Add a bottom border to separate the user's name from the rest of the card */
+    border-bottom: 1px solid #ccc;
+}
+
+.user-meta {
+    margin-top: 12px;
+    text-align: left;
+    display: flex;
+}
+
+
+.user-meta__row {
+    display: flex;
+    align-items: center;
+    /* Add a light gray background color to make the user's meta data stand out */
+    background-color: #f2f2f2;
+    padding: 5px;
+    /* Add a bottom border to separate each row of meta data */
+    border-bottom: 1px solid #ccc;
+}
+
+.user-meta__row:not(:first-child) {
+    margin-left: 12px;
+}
+
+.user-meta__row span {
+    margin-left: 8px;
+}
+
+.user-meta__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.user-card-list__item {
+    list-style: none;
+    box-shadow: 0 2px 2px 2px #aaa;
+    margin-bottom: 20px;
+}
+
+.user-details__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    margin-top: 12px;
+}
+
+.user-details__key {
+    color: #010203;
+    width: 20%;
+}
+
+.user-details__value {
+    color: #484848;
+    margin-left: 16px;
+    width: 80%;
+}
+
+.processing-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4CAF50; /* Green background color */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000; /* Ensure it appears above other elements */
+    animation: slide-up 0.3s ease-in-out; /* Add a slide-up animation */
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100%); /* Start from the bottom */
+    }
+    to {
+        transform: translateY(0); /* Move up to show the popup */
+    }
+}
+
+.user_card_select:hover,
+.user_card_preview:hover {
+    background-color: #0056b3; /* Button background color on hover */
+}
+
+.user_card_select,
+.user_card_preview {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    padding: 10px 20px; /* Padding within the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+.user-meta__container {
+    display: flex;
+    justify-content: space-between; /* Align items at the start and end, pushing the image to the right */
+    align-items: center; /* Vertically center align the content */
+}
+
