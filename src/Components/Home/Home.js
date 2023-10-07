@@ -32,7 +32,7 @@ function Home() {
             <h2>List of Mentors</h2>
             {isLoading ? ( // Show loading message when isLoading is true
                 <p>Your request is being processed...</p>
-            ) : (
+            ) : users?.totalCount===0? <p>No data found for mentors...</p> : (
                 <ul className="user-card-list">
                     {
                         users?.mentors?.map((user, index) => (

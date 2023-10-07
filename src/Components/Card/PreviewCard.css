@@ -119,3 +119,9 @@
     align-items: center; /* Vertically center align the content */
 }
 
+.user_card_select_green {
+    background-color: green; /* Set the background color to green */
+    color: white; /* Set the text color to white or any contrasting color */
+    /* Add any other styling you want for the green button */
+}
+

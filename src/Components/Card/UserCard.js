@@ -2,6 +2,7 @@ import React, { useState }  from 'react';
 import './UserCard.css'
 import {useLocation, useNavigate} from 'react-router-dom';
 import YourComponent from './YourComponent';
+import ButtonChange from './ButtonChange';
 
 
 const UserCard = ({ user }) => {
@@ -22,7 +23,7 @@ const UserCard = ({ user }) => {
 
         setTimeout(() => {
             setShowPopup(false);
-        }, 2000);
+        }, 500);
     };
 
 
@@ -44,22 +45,23 @@ const UserCard = ({ user }) => {
         {user?.ORGN ? `${capitalizeFirstLetter(user?.EXP_DESIG)} At ${capitalizeFirstLetter(user?.ORGN)}` : capitalizeFirstLetter(user?.EXP_DESIG)}
     </span>
                     </div>
-                    <div className='user-meta__row'>
-                        <button
-                            type='button'
-                            className='user_card_select'
-                            onClick={handleSelectUser}
-                        >
-                            Show Interest
-                        </button>
-                        <button
-                            type='button'
-                            className='user_card_preview'
-                            onClick={handlePreviewUser}
-                        >
-                            Preview Mentor
-                        </button>
-                    </div>
+                    <ButtonChange user={user}/>
+                    {/*<div className='user-meta__row'>*/}
+                    {/*    <button*/}
+                    {/*        type='button'*/}
+                    {/*        className='user_card_select'*/}
+                    {/*        onClick={handleSelectUser}*/}
+                    {/*    >*/}
+                    {/*        Show Interest*/}
+                    {/*    </button>*/}
+                    {/*    <button*/}
+                    {/*        type='button'*/}
+                    {/*        className='user_card_preview'*/}
+                    {/*        onClick={handlePreviewUser}*/}
+                    {/*    >*/}
+                    {/*        Preview Mentor*/}
+                    {/*    </button>*/}
+                    {/*</div>*/}
                 </div>
                 <div className='user-details'>
                     <div className='user-details__row'>
@@ -76,7 +78,7 @@ const UserCard = ({ user }) => {
             </div>
             {showPopup && (
                 <div className="processing-popup">
-                    <p>We are processing your request</p>
+                    <p>Request sent<    /p>
                 </div>
             )}
         </div>
